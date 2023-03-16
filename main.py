@@ -55,24 +55,16 @@ def main():
 
     data = []
 
-    ievade = input()
-    text = ""
-    if ievade == "F":
-        text = input()
-        with open(text) as f:
-            lines = f.readlines()
-            array = lines[0].split()
-            n = int(array[0])
-            m = int(array[1])
-            array = lines[1].split()
-            for a in array:
-                data.append(int(a))
-    if ievade == "I":
-        n = int(input("Enter number of processes : ")) 
-        m = int(input("Enter number of jobs : "))
-        for i in range(0, m):
-            ele = int(input())
-            data.append(ele)
+    firstLine = input()
+    inputArray = firstLine.split()
+    n = int(inputArray[0])
+    m = int(inputArray[1])
+
+    secondLine = input()
+    inputArray = secondLine.split()
+    for i in range(0, m):
+        ele = int(inputArray[i])
+        data.append(ele)
 
     result = parallel_processing(n,m,data)
     
