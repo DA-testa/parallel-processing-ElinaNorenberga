@@ -68,8 +68,9 @@ def main():
             for a in array:
                 data.append(int(a))
     if ievade == "I":
-        n = int(input("Enter number of elements : ")) 
-        for i in range(0, n):
+        n = int(input("Enter number of processes : ")) 
+        m = int(input("Enter number of jobs : "))
+        for i in range(0, m):
             ele = int(input())
             data.append(ele)
 
